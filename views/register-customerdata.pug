@@ -1,0 +1,84 @@
+extends layout-dark
+
+block content
+
+    main
+        div(class="main-content registration-content grey-background")
+            div(class="container")
+                div(class="content-des text-center")
+                    h4(style="color:#333;font-family:'Roboto';font-weight:300;margin-bottom:1rem;") Broadband Fiber Online Registration
+                    
+                div(class="row multistep justify-content-center" style="margin-bottom:2.5rem;")
+                    div(class="col-xs-4 multistep-step complete")
+                        div(class="text-center multistep-stepname") Coverage Area
+                        div(class="progress")
+                            div(class="progress-bar")
+                        a(href="#" class="multistep-dot")
+            
+                    div(class="col-xs-4 multistep-step current")
+                        div(class="text-center multistep-stepname") Customer Data
+                        div(class="progress") 
+                            div(class="progress-bar")
+                        a(href="#" class="multistep-dot")
+            
+                    div(class="col-xs-4 multistep-step next")
+                        div(class="text-center multistep-stepname") Summary
+                        div(class="progress")
+                            div(class="progress-bar")
+                        a(href="#" class="multistep-dot")
+                                
+                div(class="row justify-content-center")
+                    div(class="col-12 col-md-6 col-lg-5")
+                        div(class="form-group")
+                            label(for="kecamatan" class="nusanet-form-label") Nama Lengkap - <span style="font-weight:300;">Full Name <span style="color:red !important;">*
+                            input(type="text" class="nusanet-form" placeholder="eg. John Doe")
+                                
+                div(class="row justify-content-center")
+                    div(class="col-12 col-md-6 col-lg-5")
+                        div(class="form-group")
+                            label(for="kecamatan" class="nusanet-form-label") No. KTP - <span style="font-weight:300;">ID No
+                            input(type="file" class="nusanet-form")
+                            p(style="font-family:'Roboto';font-size:12px;font-weight:300;margin-top:1rem;") Mohon unggah ID Anda (KTP/Passport/KIMS) untuk proses pendaftaran yang lebih cepat.
+                            p(style="font-family:'Roboto';font-size:12px;font-weight:300;margin-top:1rem;") Please upload your ID (KTP/Passport/KMIS) for a faster registration process.
+                                
+                div(class="row justify-content-center")
+                    div(class="col-12 col-md-6 col-lg-5")
+                        div(class="form-group")
+                            label(for="kecamatan" class="nusanet-form-label") No. Telp. - <span style="font-weight:300;">Fixed Line
+                            input(type="text" class="nusanet-form" placeholder="eg. 021-12345678")
+                
+                div(class="row justify-content-center")
+                    div(class="col-12 col-md-6 col-lg-5")
+                        div(class="form-group")
+                            label(for="kecamatan" class="nusanet-form-label") No. HP - <span style="font-weight:300;">Mobile Phone <span style="color:red !important;">*
+                            input(type="text" class="nusanet-form" placeholder="eg. 081234567890")
+                                
+                div(class="row justify-content-center")
+                    div(class="col-12 col-md-6 col-lg-5")
+                        div(class="form-group")
+                            label(for="kecamatan" class="nusanet-form-label") Email - <span style="font-weight:300;">Email <span style="color:red !important;">*
+                            input(type="email" class="nusanet-form" placeholder="eg. john.doe@example")
+                            p(style="font-family:'Roboto';font-size:12px;font-weight:300;margin-top:1rem;") Mohon isi alamat email dengan benar karena konfirmasi dan pengiriman tagihan akan kami tujukan ke email tersebut.
+                            p(style="font-family:'Roboto';font-size:12px;font-weight:300;margin-top:1rem;") Please fill your email address correctly, we will send a confirmation and CBN billing statement to your email address.
+                                
+                div(class="row justify-content-center")
+                    div(class="col-12 col-md-6 col-lg-5")
+                        div(class="form-group")
+                            label(for="wilayah" class="nusanet-form-label") Paket - <span style="font-weight:300;">Package <span style="color:red !important;">*
+                            select(class="nusanet-form" id="regionSeleect")
+                                option(disabled selected value="") Select Package
+                                option Basic
+                                option Start Up 1
+                                option Start Up 2
+                                option Start Up 3
+                                option Fast 1
+                                option Fast 2
+                                option Fast 3
+                                option Turbo 500
+                                option Turbo 1000
+                            
+                div(class="row justify-content-center" style="margin:1rem 0;")
+                    div(class="col-12 col-md-6 col-lg-5 text-center")
+                        a(href="" class="nusa-button-grey hoverable") PREVIOUS
+                        span &nbsp;&nbsp;
+                        a(href="" class="nusa-button hoverable") NEXT

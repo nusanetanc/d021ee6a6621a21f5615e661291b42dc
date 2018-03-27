@@ -1,0 +1,35 @@
+extends layout-dark
+
+block content
+  .register-page
+    .register-form-wrapper.col-12
+      h4(style="text-align:center;") Proccess Registration Step
+      p(style="text-align:center;text-transform: capitalize;") to order #{selectpackage} Package
+      form(method='POST', class="register-form", action='/broadband-fiber-optic/registration')
+          div.form-group
+            label(for='name') Name:
+            input#name.form-control(type='text', placeholder='Full Name' name='name')
+          div.form-group
+            label(for='email') Email:
+            input#email.form-control(type='email', placeholder='name@email.com' name='email')
+          div.form-group
+            label(for='phone') Phone:
+            input#phone.form-control(type='phone', placeholder='021++++++' name='phone')
+            input#package.form-control(type='hidden', name='package' value={selectpackage})
+          div.form-group
+            label(for='city') City:
+            select#city.form-control(type='city', name='city' onchange="selectCity()")
+              option(value='Jakarta Utara') Jakarta Utara
+              option(value='Jakarta Pusat') Jakarta Pusat
+              option(value='Jakarta Selatan') Jakarta Selatan
+              option(value='Jakarta Barat') Jakarta Barat
+              option(value='Jakarta Timur') Jakarta Timur
+              option(value='Other') Other
+          div.form-group
+            label(for='districs') Subdistric:
+            select#districs.form-control(type='districs', name='districs' onchange="selectSubdistric()")
+          div.form-group
+            label(for='vilage') Village:
+            select#villages.form-control(type='villages', name='villages' onchange="selectVillage()")       
+          input.btn.btn-primary(class='nusa-button', type='submit',value='SUBMIT')
+          script(src='/javascripts/datalist.js')

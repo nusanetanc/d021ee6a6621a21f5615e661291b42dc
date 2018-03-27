@@ -1,0 +1,59 @@
+extends layout-dark
+
+block content
+
+  div(style="background-color:#fff;margin-top:-100px;height:200px")
+    
+  
+  main
+    div(class="about-container section")
+        div(class="support-top")
+            h3 We’re here to help.
+            p Have a question? Send us a note using the form below <br/>and someone from the Nusanet team will be in touch soon.
+
+    div(style="padding:2rem 0;background-color:#d5d8e3;margin-bottom:0.6rem;padding:10px 100px 100px 100px;")
+        div(class="row")
+            div(class="col-md-5")
+                div(style="")
+                    img(width="360px" src="/images/image-twitter-nusanet.png")
+                    br
+                    br
+                    h4 Learn something new every day with @Nusanet
+                    p We're here to help you get the most from your Nusanet services. Tweet us your question to get support or follow us for helpful tips.
+                    br
+                    h4 24/7 Helpdesk Support
+                    p Phone : 021 – 5276616<br/>SMS : 0819 8 54321<br/>WhatsApp : 0812 8691 1930<br/>Email : <a style="color:#444;" href="mailto:helpdesk@jkt.nusa.net.id">helpdesk@jkt.nusa.net.id</a>
+            
+            div(class="col-md-6" style="margin-top:130px;")
+                h4 Leave a message for us
+                br
+                form(method='POST', action='/support')
+                    div(class="row justify-content-center")
+                        div(class="col-12 col-md-6" style="margin-bottom:1rem;")
+                            input(type="text" class="nusanet-form" placeholder="Name" id="name" name="name")
+                            
+                        div(class="col-12 col-md-6" style="margin-bottom:1rem;")
+                            input(type="email" class="nusanet-form" id="email" name="email" placeholder="Email")
+                    
+                    div(class="row justify-content-center")
+                        div(class="col-12 col-md-12" style="margin-bottom:1rem;")
+                            select(class="nusanet-form" id="selectFor" name="selectFor")
+                                option(disabled selected value="") Reason for getting in touch
+                                option Sales
+                                option Billing
+                                option Human Resource
+                                option Network
+                                option Customer Service
+                                option Technician Support
+                                option Other
+                                
+                    div(class="row justify-content-center") 
+                        div(class="col-12 col-md-12" style="margin-bottom:1rem;")
+                            input(type="text" class="nusanet-form" placeholder="Subject" id="Subject" name="Subject")
+                            
+                    div(class="row justify-content-center")
+                        div(class="col-12 col-md-12" style="margin-bottom:1rem;")
+                            textarea(class="nusanet-form" id="message" name="message" rows="3" placeholder="Brief description of how Nusanet can help you")
+                            
+                    div(class="row" style="margin-left:5px;")
+                        input.btn.btn-primary(class='nusa-button', type='submit',value='SUBMIT')

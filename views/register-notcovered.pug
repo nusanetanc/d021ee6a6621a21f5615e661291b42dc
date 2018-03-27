@@ -1,0 +1,69 @@
+extends layout-dark
+
+block content
+
+    main
+        form(id="regForm" method="post" action="/broadband-fiber-optic/inquiry-form")
+            div(class="main-content registration-content grey-background")
+                div(class="container")
+                    div(class="content-des text-center")
+                        h4(style="color:#333;font-family:'Roboto';font-weight:300;margin-bottom:1rem;") Formulir Inquiry Broadband Fiber
+                    div(class="row justify-content-center ")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="full-name" class="form-control-label") Full Name - <span style="font-weight:300;">Subdistrict
+                                input#full-name(type="text" name="fullname" class="form-control" required)
+                                
+                    div(class="row justify-content-center ")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="mobile-number" class="form-control-label") Mobile Number - <span style="font-weight:300;">Subdistrict
+                                input#mobile-number(type="text" name="mobilenumber" class="form-control" required)
+                                
+                    div(class="row justify-content-center ")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="email-addr" class="form-control-label") E-mail Address - <span style="font-weight:300;">Subdistrict
+                                input#email-addr(type="text" name="emailaddr" class="form-control" required)
+                    
+                    div(class="row justify-content-center ")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="city" class="form-control-label") Kota - <span style="font-weight:300;">Subdistrict
+                                input#city(type="text" name="city" class="form-control" required)
+                                
+                    div(class="row justify-content-center ")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="subdistict" class="form-control-label") Kecamatan - <span style="font-weight:300;">Subdistrict
+                                input#subdistict(type="text" name="subdistict" class="form-control" required)
+                                    
+                    div(class="row justify-content-center ")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="villages" class="form-control-label") Kelurahan - <span style="font-weight:300;">Village	
+                                input#villages(type="text" name="villages" class="form-control" required)
+                    
+                    div(class="row justify-content-center ")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="strets" class="form-control-label") Jalan - <span style="font-weight:300;">Street	
+                                input#strets(type="text" name="strets" class="form-control" required)
+                                    
+                    div(class="row justify-content-center ")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="no" class="form-control-label") No - <span style="font-weight:300;">No	
+                                input#no(type="text" name="no" class="form-control" required)
+                                
+                    div(class="row justify-content-center ")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="addtional" class="form-control-label") Tambahan - <span style="font-weight:300;">Additional	
+                                textarea#addtional(class="form-control" name="addtional" rows="3")
+ 
+                    div(class="row justify-content-center" style="margin:1rem 0;")
+                        div(class="col-12 col-md-6 col-lg-5 text-center")
+                            input#submit(type="submit" class="nusa-button hoverable" value="SUBMIT")
+                            
+    script(src="/javascripts/register.js")

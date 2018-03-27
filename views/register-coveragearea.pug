@@ -1,0 +1,136 @@
+extends layout-dark
+
+block content
+
+    main
+        form(id="regForm")
+            div(class="main-content registration-content grey-background")
+                div(class="container")
+                    div(class="content-des text-center")
+                        h4(style="color:#333;font-family:'Roboto';font-weight:300;margin-bottom:1rem;") Broadband Fiber Online Registration
+                        
+                    div(class="row multistep justify-content-center" style="margin-bottom:2.5rem;")
+                        div(class="col-xs-4 multistep-step current")
+                            div(class="text-center multistep-stepname") Coverage Area
+                            div(class="progress")
+                                div(class="progress-bar")
+                            a(href="#" class="multistep-dot")
+                
+                        div(class="col-xs-4 multistep-step next")
+                            div(class="text-center multistep-stepname") Customer Data
+                            div(class="progress") 
+                                div(class="progress-bar")
+                            a(href="#" class="multistep-dot")
+                
+                        div(class="col-xs-4 multistep-step next")
+                            div(class="text-center multistep-stepname") Summary
+                            div(class="progress")
+                                div(class="progress-bar")
+                            a(href="#" class="multistep-dot")
+                    
+                    div(class="row justify-content-center " id="region")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="wilayah" class="nusanet-form-label") Wilayah - <span style="font-weight:300;">Region
+                                select(class="nusanet-form" id="regionSeleect" required)
+                                    option Jakarta Barat
+                                    option Jakarta Pusat
+                                    option Jakarta Selatan
+                                    option Jakarta Timur
+                                    option Jakarta Utara
+                                    
+                    div(class="row justify-content-center " id="subdistric")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="kecamatan" class="nusanet-form-label") Kecamatan - <span style="font-weight:300;">Subdistrict
+                                select(class="nusanet-form" id="regionSeleect" required)
+                                    option(disabled selected value="") Select Subdistric
+                                    option (Not Covered)
+                                    option Batu Ceper
+                                    option Cengkareng
+                                    option Cengkareng Barat
+                                    
+                    div(class="row justify-content-center " id="village")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="kecamatan" class="nusanet-form-label") Kelurahan - <span style="font-weight:300;">Village	
+                                select(class="nusanet-form" id="regionSeleect" required)
+                                    option(disabled selected value="") Select Village
+                                    option (Not Covered)
+                                    option Batu Ceper
+                                    option Cengkareng
+                                    option Cengkareng Barat
+                    
+                    div(class="row justify-content-center" id="street")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="kecamatan" class="nusanet-form-label") Jalan - <span style="font-weight:300;">Street	
+                                select(class="nusanet-form" id="regionSeleect" required)
+                                    option(disabled selected value="") Select Street
+                                    option (Not Covered)
+                                    option Batu Ceper
+                                    option Cengkareng
+                                    option Cengkareng Barat
+                                    
+                    div(class="row justify-content-center" id="no")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="kecamatan" class="nusanet-form-label") No - <span style="font-weight:300;">No	
+                                select(class="nusanet-form" id="regionSeleect" required)
+                                    option(disabled selected value="") Select No
+                                    option (Not Covered)
+                                    option 1
+                                    option 2
+                                    option 3
+                                    
+                    div(class="row justify-content-center hide" style="margin:1rem 0;")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                span(style="font-family:'Roboto';font-size:12px;font-weight:500;") Belum masuk cakupan area kami?
+                                p(style="font-family:'Roboto';font-size:12px;font-weight:300;margin-top:1rem;") Mohon maaf atas ketidaknyamanan ini, kami akan terus mengembangkan jaringan dan cakupan area kami.Silahkan masukan alamat Anda pada kotak isian dibawah ini. Kami akan mempercepat perluasan jaringan kelokasi Anda.
+                    
+                    div(class="row justify-content-center hide" style="margin:1rem 0;")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                span(style="font-family:'Roboto';font-size:12px;font-weight:500;") Not covered?
+                                p(style="font-family:'Roboto';font-size:12px;font-weight:300;margin-top:1rem;") We apologize for your inconvenience, we continuously expanding our network and coverage area.Please enter your address in the field below as we will accelerate our development into your area.
+                                    
+                    div(class="row justify-content-center hide")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="kecamatan" class="nusanet-form-label") Kecamatan - <span style="font-weight:300;">Subdistrict
+                                input(type="text" class="nusanet-form" required)
+                                    
+                    div(class="row justify-content-center hide")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="kecamatan" class="nusanet-form-label") Kelurahan - <span style="font-weight:300;">Village	
+                                input(type="text" class="nusanet-form" required)
+                    
+                    div(class="row justify-content-center hide")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="kecamatan" class="nusanet-form-label") Jalan - <span style="font-weight:300;">Street	
+                                input(type="text" class="nusanet-form" required)
+                                    
+                    div(class="row justify-content-center hide")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="kecamatan" class="nusanet-form-label") No - <span style="font-weight:300;">No	
+                                input(type="text" class="nusanet-form" required)
+                                
+                    div(class="row justify-content-center hide")
+                        div(class="col-12 col-md-6 col-lg-5")
+                            div(class="form-group")
+                                label(for="kecamatan" class="nusanet-form-label") Tambahan - <span style="font-weight:300;">Additional	
+                                textarea(class="nusanet-form" rows="3")
+                                    
+                    
+                                
+                    div(class="row justify-content-center" style="margin:1rem 0;")
+                        div(class="col-12 col-md-6 col-lg-5 text-center")
+                            a(href="" class="nusa-button-grey hoverable") PREVIOUS
+                            span &nbsp;&nbsp;
+                            a(href="" class="nusa-button hoverable") NEXT
+                            
+    script(src="/javascripts/register.js")

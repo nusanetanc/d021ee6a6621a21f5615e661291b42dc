@@ -1,0 +1,14 @@
+extends layout-dark
+
+block content
+
+    div(style="background-color:#f7f7f7;margin-top:-100px;height:100px")
+    
+    main
+        .register-success-header(style="background-image: url(/images/bg-about-top.png);background-size: cover;background-position: center top;padding:9rem 0;")
+            .conteiner
+                .row.justify-content-center.align-items-center
+                    .col-6.text-center
+                        span(style="font-weight:600;font-size:2.8rem;color:#0daf4b;") THANK YOU
+                        if(message)
+                        p(style="font-family:'Roboto';font-weight:300;font-size:1rem;color:#666;") #{ message }

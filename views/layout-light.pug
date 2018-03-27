@@ -1,0 +1,125 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+    link(href="https://use.fontawesome.com/releases/v5.0.6/css/all.css", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Google+Sans:100,300,400,500,700", rel="stylesheet")
+    link(rel="icon", sizes="192x192", href="/images/favicon.ico")
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet' href='/stylesheets/style-v01.css')
+    title #{title}
+    meta(property="og:title", content="Nusanet Bandung")
+    meta(property="og:description", content="Internet Solution Provider")
+    script(async="async", src="https://www.googletagmanager.com/gtag/js?id=UA-114495712-1")
+    script window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);};gtag('js', new Date());gtag('config', 'UA-114495712-1');
+  body
+    div(class="nusa-container")
+      nav(class="navbar navbar-expand-lg nusa-nav")
+        button(class="navbar-toggler", type="button", data-toggle="collapse", data-target="#navbarTogglerDemo03", aria-controls="navbarTogglerDemo03", aria-expanded="false", aria-label="Toggle navigation")
+          span(class="navbar-toggler-icon")
+            i(class="material-icons", style="font-size:34px") menu
+        a(class="navbar-brand", href="https://nsnt2018-purwanto1337.c9users.io/")
+          img(height="40px", src="/images/logo-nusanet.png")
+        div(class="collapse navbar-collapse", id="navbarTogglerDemo03")
+          ul(class="navbar-nav mr-auto")
+            li(class="nav-item dropdown")
+              a &nbsp
+          ul(class="navbar-nav")
+            li(class="nav-item dropdown")
+              a(class="nav-link   dropdown-toggle", href="#", id="navbarDropdownMenuLink", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Broadband Business
+              div(class="dropdown-menu", aria-labelledby="navbarDropdownMenuLink")
+                a(class="dropdown-item", href="retail-business-fiber") Broadband Fiber Optic
+            li(class="nav-item dropdown")
+              a(class="nav-link   dropdown-toggle", href="#", id="navbarDropdownMenuLink", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Corporate Solutions
+              div(class="dropdown-menu", aria-labelledby="navbarDropdownMenuLink")
+                a(class="dropdown-item", href="/corporate-wireless") Radio Wireless
+                a(class="dropdown-item", href="/corporate-fiber-optic") Fiber Optic
+            li(class="nav-item")
+              a(class="nav-link   ", href="/support") Support
+          a(href="/contact", class="nusa-button hoverable") CONTACT US
+          
+    
+      block content
+      
+      footer(class="")
+        div(class="nusa-container")
+          div(class="row")
+            div(class="col-12 col-lg-6 footer-about")
+              img(src="https://jkt.nusa.net.id/wp-content/uploads/2015/11/logo-nusanet.png", width="90px", height="auto")
+              br
+              br
+              span(class="footer-text") Established since 1996 as a web hosting and design company, Nusanet is now an ISP company licensed nationally from Dirjen Postel/Post and Telecommunication General Director and is the first to grow from outside of Java island.
+              br
+              br
+            div(class="col-6 col-lg-2 footer-link")
+              h6(class="footer-h6") Company
+              br
+              a(href="/about", class="footer-text") About
+              br
+              a(href="", class="footer-text") Blog
+              br
+              a(href="/careers", class="footer-text") Careers
+              //div
+                br
+                a(href="", class="footer-text") Press
+                br
+                a(href="", class="footer-text") Privacy
+                br
+                a(href="", class="footer-text") Terms
+                br
+            div(class="col-6 col-lg-2 footer-link")
+              h6(class="footer-h6") Solutions
+              br
+              a(href="/broadband-fiber-optic", class="footer-text") Broadband Fiber Optic
+              br
+              a(href="/corporate-wireless", class="footer-text") Radio Wireless
+              br
+              a(href="/corporate-fiber-optic", class="footer-text") Fiber Optic
+              br
+            div(class="col-6 col-lg-2 footer-pay")
+              h6(class="footer-h6") Our Partners
+              br
+              div(class="row", style="margin-bottom:1rem;")
+                div(class="col-4")
+                  img(src="/images/logo-apjii.png", width="50px", height="auto")
+                div(class="col-4")
+                  img(src="/images/logo-telkom.png", width="50px", height="auto")
+                div(class="col-4")
+                  img(src="/images/icon-indosat.png", width="50px", height="auto")
+              div(class="row", style="margin-bottom:1rem;")
+                div(class="col-4")
+                  img(src="/images/logo-cambium.png", width="50px", height="auto")
+          div(class="footer-social")
+            div(class="row")
+              div(calss="col-12")
+                img(src="/images/img-social/facebook.svg", width="25px", height="auto")
+                span &nbsp;
+                img(src="/images/img-social/linkedin.svg", width="25px", height="auto")
+                span &nbsp;
+                img(src="/images/img-social/twitter-logo.svg", width="25px", height="auto")
+                span &nbsp;
+                img(src="/images/img-social/instagram-logo.svg", width="25px", height="auto")
+          div(class="footer-office")
+            div(class="row")
+              div(class="col-6")
+                span(class="footer-text") Our Office
+              div(class="col-6")
+                span(class="footer-text", style="font-weight:700;") Medan&nbsp;&nbsp;&nbsp; Pekanbaru&nbsp;&nbsp;&nbsp; Palembang&nbsp;&nbsp;&nbsp; Lampung&nbsp;&nbsp;&nbsp; Jakarta &nbsp;&nbsp;&nbsp; Bandung&nbsp;&nbsp;&nbsp; Malang&nbsp;&nbsp;&nbsp; Surabaya&nbsp;&nbsp;&nbsp; Bali
+            div(class="row")
+              div(class="col-6")
+                span(class="footer-text") Our Data Center
+              div(class="col-6")
+                span(class="footer-text", style="font-weight:700;") Medan &nbsp;&nbsp;&nbsp;Jakarta
+          div(class="footer-c")
+            div(class="row")
+              div(class="col-6")
+                span(class="footer-text") &copy; 2018 Nusanet Jakarta - PT Media Andalan Nusa.
+              div(class="col-6")
+                //span(class="footer-text")
+                  a(href="", class="footer-text", style="padding-right:0.5rem;") Privacy
+                  a(href="", class="footer-text", style="padding-right:0.5rem;") Terms
+                  a(href="", class="footer-text", style="padding-right:0.5rem;") Accessibility
+    script(src='/bower_components/jquery/dist/jquery.js')  
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')

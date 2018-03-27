@@ -1,0 +1,165 @@
+extends layout-dark
+
+block content
+  div(class="register-page" ng-app="")
+    .register-form-wrapper.col-12
+      h4(style="text-align:center;margin-bottom:-25px") Broadband Fiber Optic Registration
+      
+      form(method='post', class="register-form",encType="multipart/form-data", novalidate, action='/broadband-fiber-optic/registration/'+selectpackage)    
+        div(class="tab-content" id="myTabContent")
+          div(class="tab-pane fade show active" id="coverage" role="tabpanel" aria-labelledby="coverage-tab")
+            //Coverage Area
+            div(class="row multistep justify-content-center" style="margin-bottom:50px;")
+              div(class="col-xs-4 multistep-step current")
+                div(class="text-center multistep-stepname") Coverage Area
+                div(class="progress")
+                  div(class="progress-bar")
+                a(class="multistep-dot")
+                      
+              div(class="col-xs-4 multistep-step next")
+                div(class="text-center multistep-stepname") Customer Data
+                div(class="progress") 
+                  div(class="progress-bar")
+                a(class="multistep-dot")
+                      
+              div(class="col-xs-4 multistep-step next")
+                div(class="text-center multistep-stepname") Summary
+                div(class="progress")
+                  div(class="progress-bar")
+                a(class="multistep-dot")
+                
+            div.form-group
+              label(for='city') Select City :
+              select#city.form-control(type='city', name='city' onchange="selectCity()" ng-model="city")
+                option(value='Jakarta Utara') Jakarta Utara
+                option(value='Jakarta Pusat') Jakarta Pusat
+                option(value='Jakarta Selatan') Jakarta Selatan
+                option(value='Jakarta Barat') Jakarta Barat
+                option(value='Jakarta Timur') Jakarta Timur
+            div#formdistrics.form-group(name='formdistrics')
+              label(for='districs') Subdistrict :
+              select#districs.form-control(type='districs', name='districs' onchange="selectSubdistric()" ng-model="subdistrics")
+            div#formvillages.form-group(name='formvillages')
+              label(for='villages') Village :
+              select#villages.form-control(type='villages', name='villages' onchange="selectVillage()" ng-model="villages")     
+                option(value='[Not Coverage]') [Not Coverage]
+            div#formstreets.form-group(name='formstreets')
+              label(for='streets') Street :
+              select#streets.form-control(type='streets', name='streets' onchange="selectStreet()" ng-model="streets")     
+                option(value='[Not Coverage]') [Not Coverage]
+            div#formstreetnos.form-group(name='formstreetnos')
+              label(for='streetnos') No :
+              select#streetnos.form-control(type='streetnos', name='streetnos' onchange="selectStreetNo()" ng-model="streetnos")    
+                option(value='[Not Coverage]') [Not Coverage]
+            div#notcoverage.form-group
+              p(style="font-family:'Roboto';font-size:12px;font-weight:300;margin-top:1rem;") <b>Not covered ?</b> We apologize for your inconvenience.Please input your area in <a href="/register-notcovered">here</a>.
+            script(src='/javascripts/datalist.js')
+          div(class="tab-pane fade" id="customer-data" role="tabpanel" aria-labelledby="customer-data-tab")
+            //Customer Data
+            div(class="row multistep justify-content-center" style="margin-bottom:50px;")
+              div(class="col-xs-4 multistep-step complete")
+                div(class="text-center multistep-stepname") Coverage Area
+                div(class="progress")
+                  div(class="progress-bar")
+                a(class="multistep-dot")
+                      
+              div(class="col-xs-4 multistep-step current")
+                div(class="text-center multistep-stepname") Customer Data
+                div(class="progress") 
+                  div(class="progress-bar")
+                a(class="multistep-dot")
+                      
+              div(class="col-xs-4 multistep-step next")
+                div(class="text-center multistep-stepname") Summary
+                div(class="progress")
+                  div(class="progress-bar")
+                a(class="multistep-dot")
+            
+            div.form-group
+              label(for='fullname') Full Name <span style="color:red;">*</span> :
+              input#fullname.form-control(type='text', placeholder='eg: John Doe' name='fullname' ng-model="fullname")
+            div.form-group
+              label(for="uploadKTP") National Identity Card (KTP)
+              input(type="file" class="form-control-file" id="uploadKTP" name="ktpFile")
+              small(class="form-text text-muted") Please upload your ID (KTP/Passport) for a faster registration process.
+            div.form-group
+              label(for='phone') Phone :
+              input#phone.form-control(type='text', placeholder='eg: 021++++++', name='phone', ng-model="phone")
+            div.form-group
+              label(for='mobilephone') Mobile Phone <span style="color:red;">*</span> :
+              input#mobilephone.form-control(type='text', placeholder='eg: 081234++++' name='mobilephone' ng-model="mobilephone")
+            div.form-group
+              label(for='email') Email <span style="color:red;">*</span> :
+              input#email.form-control(type='email', placeholder='eg: johndoe@mail.com' name='email' ng-model="email")
+              small(id="emailHelp" class="form-text text-muted") Please fill your email address correctly, we will send a confirmation and Nusanet billing statement to your email address.
+            
+          div(class="tab-pane fade" id="summary" role="tabpanel" aria-labelledby="summary-tab")
+            //Summary
+            div(class="row multistep justify-content-center" style="margin-bottom:50px;")
+              div(class="col-xs-4 multistep-step complete")
+                div(class="text-center multistep-stepname") Coverage Area
+                div(class="progress")
+                  div(class="progress-bar")
+                a(class="multistep-dot")
+                      
+              div(class="col-xs-4 multistep-step complete")
+                div(class="text-center multistep-stepname") Customer Data
+                div(class="progress") 
+                  div(class="progress-bar")
+                a(class="multistep-dot")
+                      
+              div(class="col-xs-4 multistep-step current")
+                div(class="text-center multistep-stepname") Summary
+                div(class="progress")
+                  div(class="progress-bar")
+                a(class="multistep-dot")
+                
+            br
+            .alert.alert-success.hide(role='alert')
+              | Success
+            br
+                
+            table(class="broadband-fo-register-summary")
+              tr
+                td Full Name
+                td(ng-bind="fullname")
+              tr  
+                td Phone
+                td(ng-bind="phone")
+              tr  
+                td Mobile Phone
+                td(ng-bind="mobilephone")
+              tr  
+                td Email
+                td(ng-bind="email")
+              tr
+                td Package
+                td(style="text-transform: capitalize;") #{selectpackage}
+              
+                
+            //table(class="broadband-fo-register-summary-white")
+              tr
+                td Installation Address
+                td 
+                  span(ng-bind="streets")
+                  span , 
+                  span(ng-bind="streetnos")
+                  span , 
+                  span(ng-bind="villages")
+                  span , 
+                  span(ng-bind="subdistrics")
+                  span , 
+                  span(ng-bind="city")
+                  
+                  
+        div(class="nav  justify-content-center" id="myTab" role="tablist")
+          a( id="coverage-tab" data-toggle="tab" href="#coverage" role="tab" aria-controls="home" class="nusa-button-grey") Back
+          span &nbsp; 
+          a( id="customer-prev-tab" data-toggle="tab" href="#customer-data" role="tab" aria-controls="customer-data" class="nusa-button-grey") Back
+          span &nbsp;
+          a( id="customer-data-tab" data-toggle="tab" href="#customer-data" role="tab" aria-controls="customer-data" class="nusa-button") Next Step
+          span &nbsp; 
+          a( id="summary-tab" data-toggle="tab" href="#summary" role="tab" aria-controls="summary" class="nusa-button") Next Step
+          span &nbsp;
+          input#registerBroadbandFo(type='submit' value="Complete Registration" class="nusa-button")
+          //a( id="complete-tab" data-toggle="tab" href="#summary" role="tab" aria-controls="summary" class="nusa-button") Complete Registration
