@@ -221,6 +221,7 @@ nav {
   text-align: center;
   margin-bottom: 6px;
 }
+
 .fours p{
   color:#314494;
   opacity:0.6;
@@ -243,7 +244,7 @@ nav {
     padding:0 35px;
 }
 .solutions-list img{
-    width:80px;
+    width:100px;
     margin-top:20px;
     margin-bottom:20px;
 }

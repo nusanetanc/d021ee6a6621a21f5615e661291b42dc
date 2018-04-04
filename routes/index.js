@@ -24,24 +24,24 @@ var smtpTransport = nodemailer.createTransport({
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Nusanet Pekanbaru - Internet Solution Provider' });
+  res.render('index', { title: 'Nusanet Jakarta - Internet Solution Provider' });
 });
 
 
 // Get about
 router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'About - Nusanet Pekanbaru' });
+  res.render('about', { title: 'About - Nusanet Jakarta' });
 });
 
 
 // Get about
 router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Contact - Nusanet Pekanbaru' });
+  res.render('contact', { title: 'Contact - Nusanet Jakarta' });
 });
 
 // Get about
 router.get('/support', function(req, res, next) {
-  res.render('support', { title: 'Support - Nusanet Pekanbaru' });
+  res.render('support', { title: 'Support - Nusanet Jakarta' });
 });
 
 // Add Submit POST Route
@@ -87,76 +87,65 @@ router.post('/support', function(req, res){
 
 /* GET Retail Business Wireless. */
 router.get('/careers', function(req, res, next) {
-  res.render('careers', { title: 'Careers - Nusanet Pekanbaru' });
+  res.render('careers', { title: 'Careers - Nusanet Jakarta' });
 });
 
 /* GET Register2. */
 router.get('/register-coverage-area', function(req, res, next) {
-  res.render('register-coveragearea', { title: 'Register - Nusanet Pekanbaru' });
+  res.render('register-coveragearea', { title: 'Register - Nusanet Jakarta' });
 });
 
 /* GET Register2. */
 router.get('/register-customer-data', function(req, res, next) {
-  res.render('register-customerdata', { title: 'Register - Nusanet Pekanbaru' });
+  res.render('register-customerdata', { title: 'Register - Nusanet Jakarta' });
 });
 
 /* GET Register2. */
 router.get('/register-summary', function(req, res, next) {
-  res.render('register-summary', { title: 'Register - Nusanet Pekanbaru' });
+  res.render('register-summary', { title: 'Register - Nusanet Jakarta' });
 });
 
 /* GET Register2. */
 router.get('/register-notcovered', function(req, res, next) {
-  res.render('register-notcovered', { title: 'Register - Nusanet Pekanbaru' });
+  res.render('register-notcovered', { title: 'Register - Nusanet Jakarta' });
 });
 
 /* GET Retail Business Fiber. */
 router.get('/broadband-fiber-optic', function(req, res, next) {
-  res.render('broadband-fiber-optic', { title: 'Broadband Fiber Optic - Nusanet Pekanbaru' });
+  res.render('broadband-fiber-optic', { title: 'Broadband Fiber Optic - Nusanet Jakarta' });
 });
 
-/* GET Broadband fiber registration page. */
-router.get('/broadband-fiber-optic/registration2/:package', function(req, res, next) {
-    res.render('register-broadband-fiber-optic', { title: 'Registration - Nusanet Pekanbaru', selectpackage: req.params.package });
-});
 
 /* GET Broadband fiber registration page. */
 router.get('/broadband-fiber-optic/registration/:package', function(req, res, next) {
-    res.render('register-broadband-fiber-optic2', { title: 'Registration - Nusanet Pekanbaru', selectpackage: req.params.package });
+    res.render('register-broadband-fiber-optic', { title: 'Registration - Nusanet Jakarta', selectpackage: req.params.package });
 });
 
 /* GET Corporate Radio Wireless. */
 router.get('/corporate-wireless', function(req, res, next) {
-  res.render('corporate-wireless', { title: 'Corporate Radio Wireless - Nusanet Pekanbaru' });
+  res.render('corporate-wireless', { title: 'Corporate Radio Wireless - Nusanet Jakarta' });
 });
 
 /* GET Corporate Radio Wireless Registration. */
 router.get('/corporate-wireless/registration/:package', function(req, res, next) {
-  res.render('register-corporate', { title: 'Registration - Nusanet Pekanbaru', selectpackage: req.params.package });
+  res.render('register-corporate', { title: 'Registration - Nusanet Jakarta', selectpackage: req.params.package });
 });
 
 /* GET Corporate Fiber Optic. */
 router.get('/corporate-fiber-optic/registration/:package', function(req, res, next) {
-  res.render('register-corporate', { title: 'Registration - Nusanet Pekanbaru', selectpackage: req.params.package });
+  res.render('register-corporate', { title: 'Registration - Nusanet Jakarta', selectpackage: req.params.package });
 });
 
 /* GET Corporate Fiber Optic. */
 router.get('/corporate-fiber-optic', function(req, res, next) {
-  res.render('corporate-fiber-optic', { title: 'Corporate Fiber Optic - Nusanet Pekanbaru' });
+  res.render('corporate-fiber-optic', { title: 'Corporate Fiber Optic - Nusanet Jakarta' });
 });
 
 /* GET Corporate Fiber Optic. */
 router.get('/register-success', function(req, res, next) {
-  res.render('register-success', { title: 'Registration SUccess - Nusanet Pekanbaru', message : req.flash('result') });
+  res.render('register-success', { title: 'Registration Success - Nusanet Jakarta', message : req.flash('result') });
 });
 
-/* GET home page. */
-router.get('/listregister', function(req, res, next) {
-  Register.find(function(err, registers) {
-       console.log( registers );
-       res.json(registers);
-   });
-});
 
 
 // Add Submit POST Route
@@ -170,20 +159,24 @@ router.post('/broadband-fiber-optic/registration/:selectpackage', function(req, 
   //console.log(req.body.fullname)
   //if(errors){
     //res.render('register-broadband-fiber-optic2', {
-     // title:'Registration - Nusanet Pekanbaru',
+     // title:'Registration - Nusanet Jakarta',
      // errors:errors,
      // selectpackage: req.params.selectpackage
    // });
  // } else {
-    var ktpFile = req.files.ktpFile;
-    var fullName = req.body.fullname;
-    // Use the mv() method to place the file somewhere on your server
-    ktpFile.mv('./uploads/'+fullName+'.jpg', function(err) {
-      if (err)
-        return res.status(500).send(err);
-   
-      console.log('KTP upload succesfully');
-    });
+    let ktpFile = req.files.ktpFile;
+    let fullName = req.body.fullname;
+    if (ktpFile == undefined ){
+      console.log("no ktp uploaded")
+    }else {
+      // Use the mv() method to place the file somewhere on your server
+      ktpFile.mv('./uploads/'+fullName+'.jpg', function(err) {
+        if (err)
+          return res.status(500).send(err);
+     
+        console.log('KTP upload succesfully');
+      });
+    }
     //var fileKtp = req.files.uploadKTP
     //var saveFile = fileKtp.mv('./public/images/ktp/'+req.body.fullname+'.png');
     var mailOptions={
@@ -296,7 +289,7 @@ router.post('/subscribe/add', function(req, res){
   
   if(errors){
     res.render('index', {
-      title:'Nusanet Pekanbaru',
+      title:'Nusanet Jakarta',
       errors:errors
     });
   } else {
