@@ -24,24 +24,24 @@ var smtpTransport = nodemailer.createTransport({
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Nusanet Jakarta - Internet Solution Provider' });
+  res.render('index', { title: 'Nusanet Pekanbaru - Internet Solution Provider' });
 });
 
 
 // Get about
 router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'About - Nusanet Jakarta' });
+  res.render('about', { title: 'About - Nusanet Pekanbaru' });
 });
 
 
 // Get about
 router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Contact - Nusanet Jakarta' });
+  res.render('contact', { title: 'Contact - Nusanet Pekanbaru' });
 });
 
 // Get about
 router.get('/support', function(req, res, next) {
-  res.render('support', { title: 'Support - Nusanet Jakarta' });
+  res.render('support', { title: 'Support - Nusanet Pekanbaru' });
 });
 
 // Add Submit POST Route
@@ -87,63 +87,72 @@ router.post('/support', function(req, res){
 
 /* GET Retail Business Wireless. */
 router.get('/careers', function(req, res, next) {
-  res.render('careers', { title: 'Careers - Nusanet Jakarta' });
+  res.render('careers', { title: 'Careers - Nusanet Pekanbaru' });
 });
 
 /* GET Register2. */
 router.get('/register-coverage-area', function(req, res, next) {
-  res.render('register-coveragearea', { title: 'Register - Nusanet Jakarta' });
+  res.render('register-coveragearea', { title: 'Register - Nusanet Pekanbaru' });
 });
 
 /* GET Register2. */
 router.get('/register-customer-data', function(req, res, next) {
-  res.render('register-customerdata', { title: 'Register - Nusanet Jakarta' });
+  res.render('register-customerdata', { title: 'Register - Nusanet Pekanbaru' });
 });
 
 /* GET Register2. */
 router.get('/register-summary', function(req, res, next) {
-  res.render('register-summary', { title: 'Register - Nusanet Jakarta' });
+  res.render('register-summary', { title: 'Register - Nusanet Pekanbaru' });
 });
 
 /* GET Register2. */
 router.get('/register-notcovered', function(req, res, next) {
-  res.render('register-notcovered', { title: 'Register - Nusanet Jakarta' });
+  res.render('register-notcovered', { title: 'Register - Nusanet Pekanbaru' });
 });
 
-/* GET Retail Business Fiber. */
+/* GET Retail Business Fiber. 
 router.get('/broadband-fiber-optic', function(req, res, next) {
-  res.render('broadband-fiber-optic', { title: 'Broadband Fiber Optic - Nusanet Jakarta' });
+  res.render('broadband-fiber-optic', { title: 'Broadband Fiber Optic - Nusanet Pekanbaru' });
 });
 
 
-/* GET Broadband fiber registration page. */
+ GET Broadband fiber registration page.
 router.get('/broadband-fiber-optic/registration/:package', function(req, res, next) {
-    res.render('register-broadband-fiber-optic', { title: 'Registration - Nusanet Jakarta', selectpackage: req.params.package });
+    res.render('register-broadband-fiber-optic', { title: 'Registration - Nusanet Pekanbaru', selectpackage: req.params.package });
+}); */
+
+/* GET Retail Business Wireless. */
+router.get('/broadband-wireless', function(req, res, next) {
+  res.render('broadband-wireless', { title: 'Broadband Wireless - Nusanet Pekanbaru' });
+});
+/* GET Retail Business Wireless Registration. */
+router.get('/broadband-wireless/registration/:package', function(req, res, next) {
+  res.render('register-corporate', { title: 'Registration - Nusanet Pekanbaru', selectpackage: req.params.package });
 });
 
 /* GET Corporate Radio Wireless. */
 router.get('/corporate-wireless', function(req, res, next) {
-  res.render('corporate-wireless', { title: 'Corporate Radio Wireless - Nusanet Jakarta' });
+  res.render('corporate-wireless', { title: 'Corporate Radio Wireless - Nusanet Pekanbaru' });
 });
 
 /* GET Corporate Radio Wireless Registration. */
 router.get('/corporate-wireless/registration/:package', function(req, res, next) {
-  res.render('register-corporate', { title: 'Registration - Nusanet Jakarta', selectpackage: req.params.package });
+  res.render('register-corporate', { title: 'Registration - Nusanet Pekanbaru', selectpackage: req.params.package });
 });
 
 /* GET Corporate Fiber Optic. */
 router.get('/corporate-fiber-optic/registration/:package', function(req, res, next) {
-  res.render('register-corporate', { title: 'Registration - Nusanet Jakarta', selectpackage: req.params.package });
+  res.render('register-corporate', { title: 'Registration - Nusanet Pekanbaru', selectpackage: req.params.package });
 });
 
 /* GET Corporate Fiber Optic. */
 router.get('/corporate-fiber-optic', function(req, res, next) {
-  res.render('corporate-fiber-optic', { title: 'Corporate Fiber Optic - Nusanet Jakarta' });
+  res.render('corporate-fiber-optic', { title: 'Corporate Fiber Optic - Nusanet Pekanbaru' });
 });
 
 /* GET Corporate Fiber Optic. */
 router.get('/register-success', function(req, res, next) {
-  res.render('register-success', { title: 'Registration Success - Nusanet Jakarta', message : req.flash('result') });
+  res.render('register-success', { title: 'Registration Success - Nusanet Pekanbaru', message : req.flash('result') });
 });
 
 
@@ -159,7 +168,7 @@ router.post('/broadband-fiber-optic/registration/:selectpackage', function(req, 
   //console.log(req.body.fullname)
   //if(errors){
     //res.render('register-broadband-fiber-optic2', {
-     // title:'Registration - Nusanet Jakarta',
+     // title:'Registration - Nusanet Pekanbaru',
      // errors:errors,
      // selectpackage: req.params.selectpackage
    // });
@@ -289,7 +298,7 @@ router.post('/subscribe/add', function(req, res){
   
   if(errors){
     res.render('index', {
-      title:'Nusanet Jakarta',
+      title:'Nusanet Pekanbaru',
       errors:errors
     });
   } else {
@@ -436,5 +445,22 @@ router.post('/careers', function(req, res){
     });
   }
 });
+
+
+
+
+//Page not found
+
+// Handle 404
+  router.use(function(req, res) {
+      res.status(404);
+     res.render('404', {title: '404: File Not Found'});
+  });
+  
+  // Handle 500
+  router.use(function(error, req, res, next) {
+      res.status(500);
+     res.render('500', {title:'500: Internal Server Error', error: error});
+  });
 
 module.exports = router;
